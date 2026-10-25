@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantkit"
+version = "0.1.0"
+description = "Tested building blocks for option pricing, risk, portfolio optimization and backtesting"
+authors = [{ name = "Adil Rafi" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "pandas>=1.5", "scipy>=1.9"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["quantkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
